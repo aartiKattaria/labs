@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    flex-direction: row; /* Can be column */
+    justify-content: space-around; /* Can be flex-start, flex-end, center, space-between, space-around, space-evenly */
+    align-items: center; /* Can be flex-start, flex-end, center, stretch, baseline */
+    width: 80%;
+    height: 50%;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 24px;
+    margin: 10px;
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* For transitions */
+}
+
+.box:hover {
+    transform: scale(1.1); /* Scaling the box on hover */
+}
+
+@keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
+
+.box {
+    animation: example 5s infinite alternate;
+}
