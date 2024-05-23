@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: palevioletred;
+}
+
+header {
+    
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+section {
+    padding: 20px;
+}
+
+#skills, #projects, #contact {
+    margin: 20px 0;
+    border: 2px solid white;
+    width: 95%;
+    color: black;
+    background-color: #fff;
+    
+}
+
+.project {
+    margin-bottom: 15px;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+}
+
+form > * {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    padding: 8px;
+}
+
+button {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.search-container {
+    display: flex;
+    align-items: center;
+    border: 3px solid #ccc;
+    padding: 5px;
+    width: 95%;
+}
+
+.traffic-lights {
+    display: flex;
+    margin-right: 10px;
+}
+
+.circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 0 2px;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    width: 100%;
+}
+.image-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container {
+    margin: 10px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+}
