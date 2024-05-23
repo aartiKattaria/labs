@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title >
+    This is my Exam Practice
+</title>
+
+<style>
+
+div.lis {
+    width:20%;  
+    float: right;
+}
+.city{
+    align-items:center;
+    background-color: #2393a2;
+    color: white;
+    border: 2px solid black;
+    margin: 20px;
+    padding: 20px;
+    width: 40%;
+}
+
+</style>
+</head>
+
+<body>
+    
+      <div style="background-color: #1b3141;" class="lis">
+      <ol style="color: antiquewhite;">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+        <li>Four</li>
+        <li>Five</li>
+        <li>Six</li>
+        <li>Three</li>
+        <li>Four</li>
+      </ol>
+      </div>
+      
+      <div class="city">
+        <h2>London</h2>
+        <p>London is the capital of England.</p>
+      </div>
+      
+      <div class="city">
+        <h2>Paris</h2>
+        <p>Paris is the capital of France.</p>
+      </div>
+      
+      <div class="city">
+        <h2>Tokyo</h2>
+        <p>Tokyo is the capital of Japan.</p>
+      </div>
+      <p id="demo">
+        This text will be changed through clicking one button!
+      </p>   
+      <button type="button", onclick="thisfunction()">Click to see changes</button>
+
+      <button onclick="myFunction()"> Hide Cities And List</button>
+
+      <h2 style="color: blue;">This is the Form</h2>
+      <form>
+        <label for="fname" style="color: rgb(23, 22, 23); font-style: oblique;">First Name</label><br>
+        <input type="text" style="background-color: #2393a2;" id="fname" name="fname" value="John"><br>
+        <label for="lname" style="color: rgb(13, 14, 14); font-style: oblique;">Last Name</label><br>
+        <input type="text" style="background-color: #2393a2; ;" id="lname" name="lname" value="Wick"><br>
+      </form>
+      
+      <h2 style="color: blue;">Radio Buttons</h2>
+      <br> 
+        <input type="radio" id="html" name="fav-language" value="html">
+        <label for="html" style="color: blue;">HTML</label><br>
+        <input type="radio" id="CSS" name="fav-language" value="CSS">
+        <label for="CSS">CSS</label><br>
+        <input type="radio" id="JavaScrip" name="fav-language" value="html">
+        <label for="JavaScrip">JavaScript</label><br>
+      </form>
+
+      <script>
+        function myFunction() {
+            var x = document.getElementsByClassName("city");
+            for (var i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+}   
+        function thisfunction(){
+            document.getElementById("demo").style.color="blue";
+            document.getElementById("demo").style.fontSize = "50px";
+            document.getElementById("demo").style.backgroundColor = "green"
+        }
+
+      </script>
+</body>
+
+</html>

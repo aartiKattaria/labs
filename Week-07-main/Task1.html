@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        #todo-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #todo-list li {
+            margin-bottom: 10px;
+            padding: 10px 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+        }
+
+        #add-task-form {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        #new-task-input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin-right: 10px;
+        }
+
+        #add-task-form button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #2fa2a4;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+
+<body>
+    <h1>To Do List</h1>
+    <ul id="todo-list"></ul>
+    <form id="add-task-form">
+        <input type="text" id="new-task-input" placeholder="Enter new task">
+        <button type="submit">Add Task</button>
+    </form>
+    <script src="script.js"></script>
+    <script>
+       
+        if (typeof(Storage) !== "undefined") {
+        
+            var tasks = localStorage.getItem("tasks");
+            if (tasks) {
+             
+                tasks = JSON.parse(tasks);
+                
+                renderTasks(tasks);
+            } else {
+              
+                tasks = [];
+            }
+        } else {
+        
+            alert("Sorry, your browser does not support local storage.");
+        }
+        function renderTasks(tasks) {
+            var todoList = document.getElementById("todo-list");
+            todoList.innerHTML = "";
+            tasks.forEach(function(task) {
+                var li = document.createElement("li");
+                li.textContent = task;
+                todoList.appendChild(li);
+            });
+        }
+     
+        function addTask() {
+            var newTaskInput = document.getElementById("new-task-input");
+            var newTask = newTaskInput.value.trim();
+            if (newTask !== "") {               
+                tasks.push(newTask);             
+                localStorage.setItem("tasks", JSON.stringify(tasks));              
+                renderTasks(tasks);                
+                newTaskInput.value = "";
+            }
+        }
+
+ 
+        var addTaskForm = document.getElementById("add-task-form");
+        addTaskForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+            addTask();
+        });
+    </script>
+    
+</body>
+
+</html>

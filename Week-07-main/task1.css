@@ -1,0 +1,41 @@
+e body {
+    font-family: sans-serif;
+}
+
+#todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#todo-list li {
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
+
+#add-task-form {
+    display: flex;
+    margin-top: 20px;
+}
+
+#new-task-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+#add-button:hover {
+    background-color: #376f84;
+}
+
+
+#add-task-form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #2fa2a4;
+    color: white;
+    cursor: pointer;
+}
