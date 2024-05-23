@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Task_01 Flex and Grid</title>
+        <style>
+            .main-container {
+                background-color: lightpink;
+                width: 70%;
+                height: auto;
+                margin:auto;
+                padding: 30px;
+            }
+            header{
+                display: flex;
+                margin: 0px auto 30px auto;
+                background-color: lightskyblue;
+                height: 100px;
+                width: 95%;
+                justify-content: center;
+            }
+            h2{
+                color: white;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size:xx-large;
+                margin: auto;
+            }
+            main {
+                display: flex;
+                justify-content: center;
+            }
+            aside{
+                display:flex;
+                background-color: lightseagreen;
+                height: 600px;
+                width: 30%;
+                margin-right: 5%;
+                justify-content: center;
+            }
+            article{
+                display: flex;
+                justify-content: center;
+                background-color: rgb(236, 107, 107);
+                width: 60%;
+                flex-direction: column;
+            }
+
+            .imagine{
+                display: flex;
+                background-color: lightgray;
+                margin: 10px;
+                height: 200px;
+                width: 200px;
+                justify-content: center;
+            }
+            .images{
+                display:flex;
+                justify-content: center;
+            }
+            footer{
+                display: flex;
+                margin: 30px auto 0 auto;
+                background-color: lightskyblue;
+                height: 100px;
+                width: 95%;
+                justify-content: center;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="main-container">
+            
+            <header>
+                <h2>Header</h2>
+            </header>
+            
+            <main>
+                <aside>
+                    <h2 id="asideContent">Aside</h2>
+                </aside>
+
+                <article>
+                    <h2>Article</h2>
+                    <div class="images">
+                        <div class="imagine">
+                            <h2>Image</h2>   
+                        </div>
+                        <div class="imagine">
+                            <h2>Image</h2>   
+                        </div>
+                        <div class="imagine">
+                            <h2>Image</h2>   
+                        </div>
+                    </div>
+                </article>
+            </main>
+
+            <footer>
+                <h2>Footer</h2>  
+            </footer>
+        </div>
+    </body>
+</html>
