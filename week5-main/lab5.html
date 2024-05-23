@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=javasc, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        JAVASCRIPT LAB
+    </h1>
+</body>
+<script>
+    function reverseArray(arr) {
+    return arr.reverse();
+}
+
+// Test the function
+console.log(reverseArray([1, 2, 3])); // Output: [3, 2, 1]
+let car = {
+    brand: 'Toyota',
+    model: 'Camry',
+    year: 2022
+};
+
+function carInfo(car) {
+    return `The ${car.brand} ${car.model} was manufactured in ${car.year}.`;
+}
+
+// Test the function
+console.log(carInfo(car)); // Output: The Toyota Camry was manufactured in 2022.
+function applyFunction(arr, func) {
+    return arr.map(func);
+}
+
+// Test the function
+console.log(applyFunction([1, 2, 3], (x) => x * 2)); // Output: [2, 4, 6]
+
+</script>
+</html>
